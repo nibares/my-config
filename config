@@ -210,7 +210,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-#set $brightlightPath "/home/nico/workspace/brightlight/./brightlight"
+#set $brightlightPath $HOME/workspace/brightlight/./brightlight
 bindsym XF86KbdBrightnessUp exec --no-startup-id sudo brightlight -pi 10 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec --no-startup-id sudo brightlight -pd 10 # decrease screen brightness
 
