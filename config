@@ -93,7 +93,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #Workspace Variable definition
-set $workspace1 "1: Chrome"
+set $workspace1 "1: www"
 set $workspace2 "2: IDE"
 set $workspace3 "3: Term"
 set $workspace4 "4: Game"
