@@ -29,8 +29,9 @@ call vundle#begin()
 "	Plugin 'vim-syntastic/syntastic'
 
 	" Markdown / Writing
-"	Plugin 'reedes/vim-pencil'
-"	Plugin 'tpope/vim-markdown' 
+	Plugin 'reedes/vim-pencil'
+	Plugin 'tpope/vim-markdown' 
+    "Plugin 'LanguageTool'
 
 call vundle#end() " *required
 filetype plugin indent on " *required
@@ -64,7 +65,7 @@ let base16colorspace=256 " Access colors present in 256 colorspace
 
 "colorscheme spacegray
 
-" Synstastic config
+"Synstastic config
 "set statusline += %#warningmsg#
 "set statusline += %{SyntasticStatuslineFlag()}
 "set statusline += %*
