@@ -184,7 +184,7 @@ mode "hdmi" {
 # this mode is to change to hdmi and back
 	bindsym h exec xrandr --output HDMI-1 --auto --right-of LVDS-1 && pactl set-card-profile 0 output:hdmi-stereo; mode "default"
 	bindsym a exec xrandr --output HDMI-1 --auto --right-of LVDS-1 && pactl set-card-profile 0 output:analog-stereo+input:analog-stereo; mode "default"
-
+#   bindsym b exec pactl set-card-profile 0 a2p_sink
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -220,7 +220,7 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id sudo brightlight -pd 10 # dec
 # It worked by default do not why
 
 # Setting compton
-exec_always compton -cC -i 0.6 -e 0.6 -fF -I 0.065 -O 0.065 -D 6 -m 0.8 
+exec_always compton -cC -i 0.6 -e 0.6 -fF -I 0.065 -O 0.065 -D 6 -m 0.8 -b 
 
 # Setting Background Wallpaper Variables
 set $backgroundWallpaper $HOME/.config/i3/wallpaper/current_wallpaper.jpg
@@ -233,6 +233,9 @@ exec_always --no-startup-id nm-applet
 
 # Executing volumeicon
 exec_always --no-startup-id volumeicon
+
+# Execute Blueman
+exec_always --no-startup-id blueman-applet
 
 # Assign applications to specific workspaces
 #
