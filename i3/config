@@ -93,16 +93,22 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #Workspace Variable definition
-set $workspace1 "1: www"
-set $workspace2 "2: IDE"
-set $workspace3 "3: Term"
-set $workspace4 "4: Game"
+#www
+set $workspace1 "1: " 
+#IDE / Code
+set $workspace2 "2: "
+#term
+set $workspace3 "3: "  
+#Game
+set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
-set $workspace9 "9: Telegram"
-set $workspace0 "0: Music"
+#Telegram
+set $workspace9 "9: "
+#music
+set $workspace0 "0: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -220,7 +226,7 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id sudo brightlight -pd 10 # dec
 # It worked by default do not why
 
 # Setting compton
-exec_always compton -cC -i 0.6 -e 0.6 -fF -I 0.065 -O 0.065 -D 6 -m 0.8 -b 
+#exec_always compton -cC -i 0.6 -e 0.6 -fF -I 0.065 -O 0.065 -D 6 -m 0.8 -b 
 
 # Setting Background Wallpaper Variables
 set $backgroundWallpaper $HOME/.config/i3/wallpaper/current_wallpaper.jpg
@@ -232,7 +238,7 @@ exec_always feh --bg-scale $backgroundWallpaper
 exec_always --no-startup-id nm-applet
 
 # Executing volumeicon
-exec_always --no-startup-id volumeicon
+#exec_always --no-startup-id volumeicon
 
 # Execute Blueman
 exec_always --no-startup-id blueman-applet
