@@ -4,6 +4,10 @@
 
 set encoding=utf8
 
+"set vim font
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+
 """ START Vundle configuration
 
 " Vim improve
@@ -14,6 +18,7 @@ filetype off     " *required
 
 " set runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/plugin/
 
 call vundle#begin()
 
@@ -24,6 +29,7 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdtree' "Nerdtree
     Plugin 'scrooloose/nerdcommenter'  "Nerdcommenter
 	Plugin 'majutsushi/tagbar' "Tagbar
+    Plugin 'ctrlpvim/ctrlp.vim' "CtrlP
     
 	" Generic programming support
 	Plugin 'jakedouglas/exuberant-ctags'
@@ -38,15 +44,13 @@ call vundle#begin()
     "Plugin 'LanguageTool'
 
     " Theme / Interface
-    Plugin 'ryanoasis/vim-devicons'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'dracula/vim'
-
+    Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end() " *required
 filetype plugin indent on " *required
-
 """ End Vundle configuration
 
 "set nowrap
@@ -130,12 +134,15 @@ augroup pencil
     autocmd FileType text         call pencil#init()
 augroup END
 
+" YouCompleteMe Fix
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 """"""""""""""""""""""""""
 " Mappings configuration
 """"""""""""""""""""""""""
 
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+"map <C-m> :TagbarToggle<CR>
 
 " Disable arrow movement, resize splits instead.
 " if get(g:, 'elite_mode')
